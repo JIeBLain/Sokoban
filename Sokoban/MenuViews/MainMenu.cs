@@ -6,7 +6,7 @@ public class MainMenu
 {
     public void Run()
     {
-        var prompt = $@"{ASCIITexts.Sokoban}Welcome to Sokoban. What would you like to do?
+        const string prompt = $@"{AsciiTexts.Sokoban}Welcome to Sokoban. What would you like to do?
 (Use the arrow keys to cycle through options and press enter to select an option.)
 ";
         var options = new[] {"Play", "About", "Exit"};
@@ -36,7 +36,7 @@ public class MainMenu
     private void DisplayAboutInfo()
     {
         Clear();
-        WriteLine($@"{ASCIITexts.Sokoban}    Sokoban is a puzzle video game genre in which the player pushes crates
+        WriteLine($@"{AsciiTexts.Sokoban}    Sokoban is a puzzle video game genre in which the player pushes crates
 or boxes around in a warehouse, trying to get them to storage locations.
 
     The game is played on a board of squares, where each square is a floor or a wall. Some

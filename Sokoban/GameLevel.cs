@@ -5,7 +5,7 @@ namespace Sokoban;
 
 public class GameLevel
 {
-    public int Level { get; set; }
+    public int Level { get; init; }
     public Cell? InitialCell { get; set; }
     public Player? Player { get; set; }
     public List<Crate?> Crates { get; } = new();
