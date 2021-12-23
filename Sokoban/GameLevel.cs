@@ -9,7 +9,7 @@ public class GameLevel
     public Cell? InitialCell { get; set; }
     public Player? Player { get; set; }
     public List<Crate?> Crates { get; } = new();
-    public int DestinationsAmount { get; set; }
+    public int DestinationsCount { get; set; }
 
     public void DrawLevel()
     {

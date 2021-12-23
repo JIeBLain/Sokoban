@@ -36,7 +36,7 @@ public class GameLevelParser
                         break;
                     case '×':
                         cell = new CrateDestination();
-                        gameLevel.DestinationsAmount++;
+                        gameLevel.DestinationsCount++;
                         break;
                     case '≡':
                         cell = new Floor();
@@ -64,10 +64,10 @@ public class GameLevelParser
 
                 if (cell == null) continue;
 
-                cell.Up = GetTile(cells, x, y - 1);
-                cell.Down = GetTile(cells, x, y + 1);
-                cell.Right = GetTile(cells, x + 1, y);
-                cell.Left = GetTile(cells, x - 1, y);
+                cell.Up = GetCell(cells, x, y - 1);
+                cell.Down = GetCell(cells, x, y + 1);
+                cell.Right = GetCell(cells, x + 1, y);
+                cell.Left = GetCell(cells, x - 1, y);
 
                 if (x == 0 && y == 0)
                     gameLevel.InitialCell = cell;
@@ -77,7 +77,7 @@ public class GameLevelParser
         return gameLevel;
     }
 
-    private Cell? GetTile(Cell?[,] cells, int x, int y)
+    private Cell? GetCell(Cell?[,] cells, int x, int y)
     {
         if (x >= cells.GetLength(1)
             || x < 0
